@@ -1,0 +1,35 @@
+[
+    {
+        "id": 1,
+        "userName": "Catherine Lee",
+        "userProfileImg": "src/assets/profile.png",
+        "userEmail": "catherinelee@test.com",
+        "userRole": "Admin",
+        "userStatus": "Active"
+    },
+    {
+      "id": 2,
+      "userName": "Russell Gibson",
+      "userProfileImg": "src/assets/profile5.png",
+      "userEmail": "russellgibson@test.com",
+      "userRole": "Admin",
+      "userStatus": "Active"
+    },
+    {
+      "id": 3,
+      "userName": "Jane Doe",
+      "userProfileImg": "src/assets/profile3.png",
+      "userEmail": "janedoe@test.com",
+      "userRole": "Guest",
+      "userStatus": "Inactive"
+    },
+    {
+      "id": 4,
+      "userName": "Daniel Kim",
+      "userProfileImg": "src/assets/profile4.png",
+      "userEmail": "danielkim@test.com",
+      "userRole": "User",
+      "userStatus": "Inactive"
+    }
+  ]
+  

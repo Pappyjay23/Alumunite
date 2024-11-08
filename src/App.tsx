@@ -7,9 +7,9 @@ import ManageUsers from "./pages/ManageUsers";
 const App = () => {
 	return (
 		<BrowserRouter>
-			<div className='bg-[#1A1B1E] h-screen text-white'>
+			<div className='bg-[#F1F4FA] min-h-screen h-full text-[#838383]'>
 				<Navbar />
-				<div className='px-8 py-2'>
+				<div className='px-4 md:px-8 pb-5 pt-[5.5rem] max-w-[1440px] mx-auto'>
 					<Routes>
 						<Route path='/' element={<Home />} />
 						<Route path='/add-user' element={<AddUser />} />

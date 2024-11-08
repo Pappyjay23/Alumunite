@@ -8,3 +8,22 @@
   box-sizing: border-box;
   font-family: "Nunito", sans-serif;
 }
+
+input::placeholder{
+  color: #00000083;
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+	height: 3px;
+  margin-right: 5px;
+}
+
+::-webkit-scrollbar-track {
+	border-radius: 100vh;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 100vh;
+	background: #000000;
+}

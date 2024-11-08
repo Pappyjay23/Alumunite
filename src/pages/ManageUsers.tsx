@@ -1,5 +1,11 @@
+import UserProfile from "../components/UserProfile";
+
 const ManageUsers = () => {
-	return <div>ManageUsers</div>;
+	return (
+		<div>
+			<UserProfile />
+		</div>
+	);
 };
 
 export default ManageUsers;
