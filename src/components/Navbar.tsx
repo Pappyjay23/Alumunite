@@ -45,7 +45,7 @@ const Navbar = () => {
 						<Link to='/' className='flex items-center gap-2'>
 							<img src={Logo} alt='Logo' className='h-auto w-[40px]' />
 							<span className='font-black text-[1.3rem] text-black'>
-								Alumnite
+								Alumunite
 							</span>
 						</Link>
 						<div className='flex items-center gap-8 font-black text-[95%]'>

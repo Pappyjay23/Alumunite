@@ -21,7 +21,7 @@ const Home = () => {
 			<div className='flex flex-col md:flex-row gap-3'>
 				<div
 					style={{ backgroundImage: `url(${HeroImg})` }}
-					className='flex-1 lg:flex-[1.5] bg-cover bg-center rounded-[15px] lg:rounded-[30px] h-[200px] lg:h-[300px] p-8 text-white shadow-md'>
+					className='flex-1 lg:flex-[1.5] bg-cover bg-center rounded-[1px] lg:rounded-[30px] h-[200px] lg:h-[300px] p-8 text-white shadow-md'>
 					<div className='flex flex-col gap-3'>
 						<span className='text-[90%]'>Dashboard Overview</span>
 						<span className='text-3xl lg:text-4xl'>Hello {activeUser.userName} 👋</span>
@@ -29,7 +29,7 @@ const Home = () => {
 				</div>
 				<div
 					style={{ backgroundImage: `url(${HeroImg2})` }}
-					className='flex-1 bg-black rounded-[15px] lg:rounded-[30px] h-[200px] lg:h-[300px] p-8 bg-cover bg-center flex gap-4 justify-center text-white'>
+					className='flex-1 bg-black rounded-[1px] lg:rounded-[30px] h-[200px] lg:h-[300px] p-8 bg-cover bg-center flex gap-4 justify-center text-white'>
 					<div className='flex flex-col gap-3 items-center text-center'>
 						<span className='text-[80%] md:text-[1rem]'>Total Users</span>
 						<span className='text-5xl lg:text-6xl'>{totalUsers}</span>
