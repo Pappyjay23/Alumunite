@@ -1,50 +1,69 @@
-# React + TypeScript + Vite
+<div align="center">
+	<h1> Alumunite </h1>
+</div>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Snapshots 📸
 
-Currently, two official plugins are available:
+![Alumunite](https://github.com/user-attachments/assets/31187b8c-31bd-4927-97a9-404b30eb50be)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features 🎉
 
-## Expanding the ESLint configuration
+- **User Management**: Easily create new users and delete existing ones with an intuitive interface. User information is read dynamically and rendered as part of the UI for a seamless experience.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Data Rendering**: All user data is dynamically loaded and displayed, ensuring that the UI is always in sync with the latest information.
 
-- Configure the top-level `parserOptions` property like this:
+- **Responsive Design**: Alumunite is optimized for various screen sizes, providing a smooth, consistent experience across mobile, tablet, and desktop devices.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **Professional UI**: Designed with a modern, clean aesthetic that emphasizes usability, Alumunite combines functionality with a polished, professional appearance.
+
+
+
+
+## Tech Stack ✨
+
+- [React.js](https://reactjs.org/) - UI Library
+- [Tailwind CSS](https://tailwindcss.com/) - Styling and UI
+- [Vite](https://vitejs.dev/) - Build tool
+- [Vercel](https://vercel.com/) - Hosting and Deployment
+
+## How to run locally 💻
+
+Follow these steps to run Tabler on your local machine.
+
+### Clone this repository
+
+```bash
+git clone https://github.com/Pappyjay23/Alumunite.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Navigate to the directory
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+cd Alumunite
 ```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Run
+
+Run the development server to view the app.
+
+```bash
+npm run dev
+```
+
+Now, you can navigate to http://localhost:5173/ to view the app.
+
+### Build
+
+```bash
+npm run build
+```
+
+## Credits ✍
+
+Implementation by [@Pappyjay23](https://github.com/Pappyjay23)
