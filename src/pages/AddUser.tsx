@@ -24,10 +24,8 @@ const AddUser = () => {
 		userProfileImg: "",
 	});
 	const [errors, setErrors] = useState<Errors>({});
-	const [isValid, setIsValid] = useState<boolean>(false);
 	const [isLoading, setIsLoading] = useState<boolean>(false);
 	const [allUsers, setAllUsers] = useState<User[]>([]);
-	const [hasSubmitted, setHasSubmitted] = useState<boolean>(false);
 	const navigate = useNavigate();
 
 	const validateInput = () => {
@@ -64,12 +62,6 @@ const AddUser = () => {
 	};
 
 	useEffect(() => {
-		if (hasSubmitted) {
-			setIsValid(validateInput());
-		}
-	}, [userData, hasSubmitted]);
-
-	useEffect(() => {
 		const savedData = localStorage.getItem("userData");
 		const initialData: User[] = savedData ? JSON.parse(savedData) : users;
 		setAllUsers(initialData);
@@ -78,35 +70,31 @@ const AddUser = () => {
 	const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
 		e.preventDefault();
 
-		setHasSubmitted(true);
-
-		if (!isValid) {
+		if (!validateInput()) {
 			toast.error("Please fill all fields correctly.");
 			return;
 		}
 
 		setIsLoading(true);
 
-		if (isValid) {
-			const highestId = allUsers.reduce((maxId, user) => {
-				return user.id > maxId ? user.id : maxId;
-			}, 0);
+		const highestId = allUsers.reduce((maxId, user) => {
+			return user.id > maxId ? user.id : maxId;
+		}, 0);
 
-			const newUser = { ...userData, id: highestId + 1 };
-			const updatedUsers = [...allUsers, newUser];
+		const newUser = { ...userData, id: highestId + 1 };
+		const updatedUsers = [...allUsers, newUser];
 
-			setAllUsers(updatedUsers);
-			localStorage.setItem("userData", JSON.stringify(updatedUsers)); 
+		setAllUsers(updatedUsers);
+		localStorage.setItem("userData", JSON.stringify(updatedUsers));
 
-			toast.success("Successfully added new user", {
-				position: "top-right",
-			});
+		toast.success("Successfully added new user", {
+			position: "top-right",
+		});
 
-			setTimeout(() => {
-				setIsLoading(false);
-				navigate("/");
-			}, 1000);
-		}
+		setTimeout(() => {
+			setIsLoading(false);
+			navigate("/");
+		}, 1000);
 	};
 
 	return (
