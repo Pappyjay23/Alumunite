@@ -28,7 +28,7 @@
 
 ## How to run locally 💻
 
-Follow these steps to run Tabler on your local machine.
+Follow these steps to run Alumunite on your local machine.
 
 ### Clone this repository
 
